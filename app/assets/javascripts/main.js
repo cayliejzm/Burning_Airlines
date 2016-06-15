@@ -12,10 +12,10 @@ $(document).ready(function () {
 
   window.setInterval(function () {
     app.flights.fetch();
-  }, 7000);
+  }, 8000);
 
   window.setInterval(function () {
     app.reservations.fetch();
-  }, 7000);
+  }, 8000);
 
 });

@@ -2,10 +2,7 @@ var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
-    '/reservations': 'reservations'
-    // 'flights/:id': 'showFlight'
-
+    '': 'index'
   },
 
   index: function () {
