@@ -10,6 +10,6 @@ $(document).ready(function () {
 
   window.setInterval(function () {
     app.airplanes.fetch();
-  }, 1000);
+  }, 3000);
 
 });
