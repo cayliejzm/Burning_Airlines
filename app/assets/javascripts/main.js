@@ -1,4 +1,4 @@
-app.airplanes = new app.Airplanes();
+app.flights = new app.Flights();
 
 $(document).ready(function () {
 
@@ -6,10 +6,10 @@ $(document).ready(function () {
 
   Backbone.history.start();
 
-  app.airplanes.fetch();
+  app.flights.fetch();
 
   window.setInterval(function () {
-    app.airplanes.fetch();
-  }, 3000);
+    app.flights.fetch();
+  }, 5000);
 
 });

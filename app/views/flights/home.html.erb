@@ -1,0 +1,38 @@
+<div id="main">
+  Burning Airlines
+</div>
+
+<script id="appViewTemplate" type="html/template">
+  <h1>Flights</h1>
+
+  <div id="flightNameForm">
+  </div>
+
+  <ul id="flights">
+  </ul>
+</script>
+
+<script id="flightInputViewTemplate" type="html/template">
+<div id="flightNumber">
+<input class="flightNumber" type="text" name="flightNumberForm" placeholder="flight number" style="text-transform:uppercase"></input>
+</div>
+<hr/>
+<div id="flightOrigin">
+<input class="flightOrigin" type="text" name="flightOriginForm" placeholder="flight origin" style="text-transform:uppercase"></input>
+</div>
+<hr/>
+<div id="flightDestination">
+<input class="flightDestination" type="text" name="flightDestinationForm" placeholder="flight destination" style="text-transform:uppercase"></input>
+</div>
+<hr/>
+<div id="flightDate">
+<input class="flightDate" type="datetime-local" name="flightDateForm" placeholder="flight date"></input>
+</div>
+<hr/>
+<div id="flightPlane">
+<input class="flightPlane" type="text" name="flightPlaneForm" placeholder="plane type" style="text-transform:uppercase"></input>
+</div>
+<hr/>
+<button type="submit" value="Submit">Submit</button>
+<hr/>
+</script>

@@ -8,10 +8,8 @@ app.AppView = Backbone.View.extend({
     var appViewTemplate = $("#appViewTemplate").html();
       this.$el.html( appViewTemplate );
 
-    var airplaneInputView = new app.AirplaneInputView();
-    airplaneInputView.render();
+    var flightInputView = new app.FlightInputView();
+    flightInputView.render();
   }
-
-
 
 });
