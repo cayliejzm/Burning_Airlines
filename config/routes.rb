@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  root "reservations#home"
 
-  root 'airplanes#home'
+  get '/flights/new', :to => 'flights#home'
+
   get 'session/new'
 
 
