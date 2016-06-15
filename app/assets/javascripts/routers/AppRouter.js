@@ -3,7 +3,8 @@ var app = app || {};
 app.AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
-    'flights/:id': 'showFlight'
+    '/reservations': 'reservations'
+    // 'flights/:id': 'showFlight'
 
   },
 
@@ -11,10 +12,6 @@ app.AppRouter = Backbone.Router.extend({
     console.log( "Empty client-side URL, index method ran" );
     var appView = new app.AppView();
     appView.render();
-  },
-
-  showFlight: function() {
-    console.log("test");
   }
 
 });
