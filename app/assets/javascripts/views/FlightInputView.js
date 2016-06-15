@@ -3,7 +3,7 @@ var app = app || {};
 app.FlightInputView = Backbone.View.extend({
   events: {
     'click button': 'createFlight',
-    'keydown textarea': 'checkForEnter'
+    'keydown input': 'checkForEnter'
   },
 
   checkForEnter: function ( event ) {
@@ -27,7 +27,7 @@ app.FlightInputView = Backbone.View.extend({
 
 
     flight.set({
-      number: flightNumber,
+      flight_number: flightNumber,
       origin: flightOrigin,
       destination: flightDestination,
       date: flightDate,
