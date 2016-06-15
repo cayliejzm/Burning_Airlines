@@ -12,11 +12,11 @@
   <% end %>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.select :user_id, User.all.map{ |u| [ u.name, u.id ] }, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :flight_id %><br>
-    <%= f.number_field :flight_id %>
+    <%= f.select :flight_id, Flight.all.map{ |f| [ f.flight_number, f.id ] }, :include_blank => true %>
   </div>
 
   <div class="actions">
