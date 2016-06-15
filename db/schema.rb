@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160614080828) do
   add_index "flights_users", ["flight_id", "user_id"], name: "index_flights_users_on_flight_id_and_user_id", using: :btree
   add_index "flights_users", ["user_id", "flight_id"], name: "index_flights_users_on_user_id_and_flight_id", using: :btree
 
-  create_table "reservations", id: false, force: :cascade do |t|
+  create_table "reservations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
