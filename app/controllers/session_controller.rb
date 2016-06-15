@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
   before_action :authenticate, :only => [:new]
+  skip_before_action :fetch_user, :only => [:new, :create]
 
   def new
   end

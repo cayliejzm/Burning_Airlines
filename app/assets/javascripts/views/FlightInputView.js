@@ -27,7 +27,7 @@ app.FlightInputView = Backbone.View.extend({
 
 
     flight.set({
-      number: flightNumber,
+      flight_number: flightNumber,
       origin: flightOrigin,
       destination: flightDestination,
       date: flightDate,
