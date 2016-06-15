@@ -10,6 +10,9 @@ app.AppView = Backbone.View.extend({
 
     var flightInputView = new app.FlightInputView();
     flightInputView.render();
+
+    var searchInputView = new app.SearchInputView();
+    searchInputView.render();
   }
 
 });
