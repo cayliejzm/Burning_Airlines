@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'airplanes#home'
   get 'session/new'
 
   resources :reservations
