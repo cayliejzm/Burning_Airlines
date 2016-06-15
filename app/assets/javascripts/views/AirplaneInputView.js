@@ -19,9 +19,9 @@ app.AirplaneInputView = Backbone.View.extend({
     console.log( "A new airplane should be created" );
     var airplane = new app.Airplane();
 
-    var planeName = this.$el.find('#planeName').val();
-    var planeRow = this.$el.find('#planeRow').val();
-    var planeColumn = this.$el.find('#planeColumn').val();
+    var planeName = this.$el.find('.planeName').val();
+    var planeRow = this.$el.find('.planeRow').val();
+    var planeColumn = this.$el.find('.planeColumn').val();
     airplane.set({
       name: planeName,
       row: planeRow,
@@ -29,9 +29,9 @@ app.AirplaneInputView = Backbone.View.extend({
     });
     airplane.save();
     app.airplanes.add( airplane );
-    this.$el.find("#planeName").val('').focus();
-    this.$el.find('#planeRow').val('').focus();
-    this.$el.find('#planeColumn').val('').focus();
+    this.$el.find(".planeName").val('').focus();
+    this.$el.find('.planeRow').val('').focus();
+    this.$el.find('.planeColumn').val('').focus();
   },
 
   el: "#planeNameForm",

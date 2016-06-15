@@ -4,14 +4,11 @@ app.AirplaneView = Backbone.View.extend({
   tagName: 'li',
   render: function () {
 
+    var name = this.model.get("name");
+    var row = this.model.get("row");
     var column = this.model.get("column");
 
-    console.log( this );
-    console.log( this.model );
-
-    debugger;
-
-    this.$el.text( column );
+    this.$el.text( name + " / " + row + " / " + column );
     this.$el.prependTo( "#airplanes" );
 
   }
