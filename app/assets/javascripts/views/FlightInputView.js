@@ -3,7 +3,7 @@ var app = app || {};
 app.FlightInputView = Backbone.View.extend({
   events: {
     'click button': 'createFlight',
-    'keydown textarea': 'checkForEnter'
+    'keydown input': 'checkForEnter'
   },
 
   checkForEnter: function ( event ) {
