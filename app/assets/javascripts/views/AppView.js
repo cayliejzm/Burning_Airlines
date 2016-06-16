@@ -13,6 +13,9 @@ app.AppView = Backbone.View.extend({
 
     var searchInputView = new app.SearchInputView();
     searchInputView.render();
+
+    var reservationInputView = new app.ReservationInputView();
+    reservationInputView.render();
   }
 
 });
