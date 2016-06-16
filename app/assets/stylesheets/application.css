@@ -42,19 +42,11 @@ h3 {
     padding: 5px;
 }
 
-<<<<<<< HEAD
-li {
-  float: left;
-}
-
-li a {
-=======
 nav li {
   float: left;
 }
 
 nav li a {
->>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
     text-decoration: none;
     font-size: 15px;
     font-weight: lighter;
