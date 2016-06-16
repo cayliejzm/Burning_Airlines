@@ -30,9 +30,13 @@
                       <li><%= link_to "LOG IN", login_path %></li>
                       <% end %>
                 </ul>
-
-
             </div>
+            <div class="sign_in">
+                        <% if @current_user %>
+                        Signed in as
+                        <%= @current_user.email %>
+                        <% end %>
+                    </div>
         </nav>
 
         <%= yield %>
