@@ -5,9 +5,6 @@ app.currentFlightId = null;
 app.SingleFlightView = Backbone.View.extend({
   events: {
     'click .seat': 'selectSeat',
-    // 'keydown input': 'checkForEnter',
-    // 'click button': 'selectSeat',
-    // 'click #seatBoard ul li': 'test'
     'click #save': 'createReservation'
   },
 
@@ -19,8 +16,6 @@ app.SingleFlightView = Backbone.View.extend({
     var seatID = row + column;
     var user_id = $("#user_id").text();
     var flight_id = app.currentFlightId
-// debugger;
-    // var reserveUserId=
     reservation.set({
       user_id: user_id,
       flight_id: flight_id,
@@ -83,7 +78,5 @@ app.SingleFlightView = Backbone.View.extend({
       this.$el.find("#destination").text(flight.destination);
       this.$el.find("#date").text(flight.date);
       this.$el.find("#plane").text(flight.plane);
-
   }
-
 });

@@ -1,17 +1,17 @@
 var app = app || {};
 
 app.ReservationView = Backbone.View.extend({
-  tagName: 'li',
+  // tagName: 'li',
   render: function () {
 // debugger;
-    var flight_number = this.model.get("flight_number");
-    var origin = this.model.get("origin");
-    var destination = this.model.get("destination");
-    var date = this.model.get("date");
-    var plane = this.model.get("plane");
+  app.reservations.where()
 
-    this.$el.text( flight_number + " / " + origin + " / " + destination + " / " + date + " / " + plane );
-    this.$el.prependTo( "#flights" );
+// What do I need here? I need the flight_id and the seatID, that the reservation model has. Yes, it has everything. Wow.
+  // selectedSeat.addClass("reserved")
+
+    //
+    // this.$el.text( flight_number + " / " + origin + " / " + destination + " / " + date + " / " + plane );
+    // this.$el.prependTo( "#flights" );
   }
 
 });
