@@ -13,12 +13,13 @@ app.SingleFlightView = Backbone.View.extend({
 
   createReservation: function (reservation) {
     var reservation = new app.Reservation();
-    var row = this.$el.find(".selected").attr('data-row')
-    var column = this.$el.find(".selected").attr('data-column')
+    var selectedSeat = this.$el.find(".selected")
+    var row = selectedSeat.attr('data-row')
+    var column = selectedSeat.attr('data-column')
     var seatID = row + column;
     var user_id = $("#user_id").text();
     var flight_id = app.currentFlightId
-debugger;
+// debugger;
     // var reserveUserId=
     reservation.set({
       user_id: user_id,
@@ -26,6 +27,7 @@ debugger;
       seatID: seatID
     }),
     reservation.save();
+    selectedSeat.addClass("reserved")
 
     app.reservations.add( reservation );
     console.log("Save will work");
