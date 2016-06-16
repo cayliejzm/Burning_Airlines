@@ -30,7 +30,7 @@ h3 {
 }
 
 
-ul {
+.navigation ul {
     position: fixed;
     top: 0;
     width: 100%;
