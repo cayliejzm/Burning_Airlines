@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   root "welcome#index"
 
+  get '/search', :to => 'reservations#home'
+
   get '/flights/new', :to => 'flights#home'
 
   get 'session/new'
