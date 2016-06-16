@@ -4,6 +4,9 @@
 <p id="user_name">
 <%= @current_user.name %>
 </p>
+<p id="user_id">
+<%= @current_user.id %>
+</p>
 
 <script id="appViewTemplate" type="html/template">
   <h1>Search Flights</h1>
@@ -34,7 +37,7 @@
   <script id="flightTemplate" type="html/template">
 
     <h1>Seats</h1>
-    
+
     <div class="flightInfo"
     <strong>Flight Number: </strong><span id="flight_number"></span>
     <br/>
@@ -50,12 +53,10 @@
 
     <div id="seatBoard">
         <ul class="row1">
-          <p></p>
           <li class="seat seat1" data-row='0' data-column='A'></li>
           <li class="seat seat2" data-row='0' data-column='B'></li>
           <li class="seat seat3" data-row='0' data-column='C'></li>
           <li class="seat seat4" data-row='0' data-column='D'></li>
-
         </ul>
         <ul class="row2">
           <li class="seat seat5" data-row='1' data-column='A'></li>
@@ -67,5 +68,7 @@
     </div>
 
     <ul id="selectedSeat"></ul>
+    <button id="save">Save</button>
+
 
   </script>

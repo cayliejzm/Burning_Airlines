@@ -2,10 +2,12 @@ var app = app || {};
 
 app.ReservationInputView = Backbone.View.extend({
   events: {
-    'click .seat': 'selectSeat',
-    // 'keydown input': 'checkForEnter',
-    // 'click button': 'selectSeat',
-    'click #seatBoard ul li': 'test'
+    // 'click .seat': 'selectSeat',
+    'click #save': 'createReservation'
+  },
+
+  createReservation: function (reservation) {
+console.log("Save will work");
   },
 
   showFlight: function (event) {
