@@ -29,15 +29,6 @@ class AirplanesController < ApplicationController
 
     redirect_to "/airplane/#{airplane.id}"
 
-    # respond_to do |format|
-    #   if @airplane.save
-    #     format.html { redirect_to @airplane, notice: 'Airplane was successfully created.' }
-    #     format.json { render :show, status: :created, location: @airplane }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @airplane.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
 
@@ -63,13 +54,16 @@ class AirplanesController < ApplicationController
   end
 
   def airbus300
+    # @airplane =
   end
 
   def boeing747
+
   end
 
 
   def privateJet
+
   end
 
   private

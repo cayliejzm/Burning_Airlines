@@ -14,27 +14,36 @@
 
   <ul class="column1">
     <p></p>
-    <li class="seat" data-column='0' data-row='A'>1A</li>
-    <li class="seat" data-column='0' data-row='B'>1B</li>
+    <li class="seat" data-row='0' data-column='A'>1A</li>
+    <li class="seat" data-row='0' data-column='B'>1B</li>
 
   </ul>
   <ul class="column2">
-    <li class="seat" data-column='1' data-row='A'>2A</li>
-    <li class="seat" data-column='1' data-row='B'>2B</li>
+    <li class="seat" data-row='1' data-column='A'>2A</li>
+    <li class="seat" data-row='1' data-column='B'>2B</li>
 
   </ul>
   <ul class="column3">
-    <li class="seat" data-column='2' data-row='A'>3A</li>
-    <li class="seat" data-column='2' data-row='B'>3B</li>
+    <li class="seat" data-row='2' data-column='A'>3A</li>
+    <li class="seat" data-row='2' data-column='B'>3B</li>
 
   </ul>
   <ul class="column3">
-    <li class="seat" data-column='3' data-row='A'>4A</li>
-    <li class="seat" data-column='3' data-row='B'>4B</li>
-
+    <li class="seat" data-row='3' data-column='A'>4A</li>
+    <li class="seat" data-row='3' data-column='B'>4B</li>
   </ul>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="airplanes.js"></script>
+<p>Private Jet's Current Flights </p>
+
+  <% @airplane.flights.each do |f| %>
+    <ul>
+      <li>
+      <%= link_to( f.flight_number, flight_path(f)) %>
+      </li>
+    </ul>
+  <% end %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="airplanes.js"></script>
 </body>
 </html>
