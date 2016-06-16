@@ -22,6 +22,7 @@ body {
   text-align: center;
   background: url("airplane.jpeg");
   background-size: cover;
+
 }
 
 h1 {
@@ -87,13 +88,8 @@ nav li a:hover {
   text-align: center;
 }
 
-.button {
-  font-size: 20px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-.button:hover {
-  background-color: gainsboro;
-  color: white;
+.field {
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: 100;
 }
