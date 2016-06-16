@@ -47,12 +47,9 @@ h3 {
 }
 
 
-<<<<<<< HEAD
-.navigation ul {
-=======
 
-nav ul {
->>>>>>> 9bb3275b13730c8f906c32b95ffa67dc51ada39b
+.navigation ul {
+
     position: fixed;
     top: 0;
     width: 100%;
