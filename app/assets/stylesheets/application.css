@@ -17,7 +17,6 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 20px;
-  font-weight: lighter;
   color: white;
   text-align: center;
   background: url("airplane.jpeg");
@@ -28,7 +27,7 @@ body {
 h1 {
   padding-top: 0px;
   text-align: left;
-  font-size: 70px;
+  font-size: 60px;
   padding-left: 15px;
   font-weight: lighter;
 }
@@ -43,7 +42,7 @@ h3 {
   font-size: 50px;
   font-weight: lighter;
   font-style: italic;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 
@@ -65,7 +64,7 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: lighter;
     display: block;
     color: black;
@@ -119,4 +118,14 @@ a {
 
 a:hover {
   color: white;
+}
+
+.flightInfo {
+  font-size: 30px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.seatBoard {
+  align-items: center;
 }
