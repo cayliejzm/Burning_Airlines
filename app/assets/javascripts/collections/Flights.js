@@ -15,6 +15,4 @@ app.Flights = Backbone.Collection.extend({
       flightView.render();
     });
   }
-
-
 });

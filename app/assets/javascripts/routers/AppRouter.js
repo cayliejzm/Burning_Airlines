@@ -2,32 +2,27 @@ var app = app || {};
 
 app.AppRouter = Backbone.Router.extend({
   routes: {
-
     '': 'index',
-    '/flights/:id': 'showPlane'
+    'flights/:id': 'showFlight'
 
   },
 
   index: function () {
     console.log( "Empty client-side URL, index method ran" );
     var appView = new app.AppView();
+    // debugger;
     appView.render();
   },
 
-  showPlane: function(id){
-    // console.log("It's working");
-    // var flight = new app.Flight({
-    //   id:id
-    // });
-    flight.fetch().done(function(){
-      console.log("Seatboard Rendered");
-      var appView = new app.AppView();
-      appView.render();
+  showFlight: function(id){
+    console.log("It's working");
+    var flight = new app.Flight({
+      id:id
+    });
+    flight.fetch().done(function(flight){
+      var flightView = new app.SingleFlightView();
+      flightView.render(flight);
     })
-    //
-    // console.log( "Empty client-side URL, index method ran" );
-    // var appView = new app.AppView();
-    // appView.render();
   }
 
 });

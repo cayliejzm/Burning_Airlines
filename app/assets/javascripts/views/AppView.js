@@ -7,7 +7,7 @@ app.AppView = Backbone.View.extend({
     console.log( "App view should be rendered now" );
     var appViewTemplate = $("#appViewTemplate").html();
       this.$el.html( appViewTemplate );
-
+    // debugger;
     var flightInputView = new app.FlightInputView();
     flightInputView.render();
 

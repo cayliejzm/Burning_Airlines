@@ -8,6 +8,9 @@ class FlightsController < ApplicationController
 
 
   def show
+    # raise 'hell';
+    # @current_user=
+
   end
 
 
