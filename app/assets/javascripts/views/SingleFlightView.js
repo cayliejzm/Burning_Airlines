@@ -34,8 +34,9 @@ debugger;
     var seat = $(e.currentTarget)
     var userName = $("#user_name")
      // $(this).css({"background-color": "red"})
-     $(".selected").removeClass()
-     seat.toggleClass("selected")
+     $(".selected").removeClass("selected")
+     seat.addClass("selected")
+    //  seat.toggleClass("selected")
      seat.html(userName)
 
 // debugger;
