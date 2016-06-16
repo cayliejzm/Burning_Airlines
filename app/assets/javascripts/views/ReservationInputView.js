@@ -30,15 +30,6 @@ app.ReservationInputView = Backbone.View.extend({
   //   console.log("Kane")
   // },
 
-  selectSeat: function () {
-
-    $('#seatBoard ul li').on("click", function(t){
-      $(this).css({"background-color": "red"})
-      debugger;
-      // console.log("Kane")
-    })
-    console.log( "A seat selected" );
-  },
 
   el: "#seatBoard",
 
