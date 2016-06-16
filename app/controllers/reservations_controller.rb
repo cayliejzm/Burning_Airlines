@@ -55,10 +55,10 @@ class ReservationsController < ApplicationController
   private
 
     def set_reservation
-      @reservation = Reservation.find(params[:id, :user_id, :flight_id])
+      @reservation = Reservation.find(params[:id])
     end
 
     def reservation_params
-      params.fetch(:reservation, {})
+      params.fetch(:reservation, {}).permit(:user_id, :flight_id)
     end
 end

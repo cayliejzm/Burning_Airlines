@@ -4,26 +4,28 @@
   width: 40px;
   height: 40px;
   background-color: gainsboro;
+  color: black;
   list-style-position:inside;
   border: 5px solid black;
 }
 
-
-classAvail {
-  background-color: gainsboro;
-}
-
-.classUnAvail {
-  font-family: "simplifica", sans-serif;
-  font-size: 40px;
-  content: "X";
-  background-color: red;
-}
+//
+// classAvail {
+//   background-color: gainsboro;
+// }
+//
+// .classUnAvail {
+//   font-family: "simplifica", sans-serif;
+//   font-size: 40px;
+//   content: "X";
+//   background-color: red;
+// }
 
 .thumbnail {
-  max-width: 100px;
+  max-width: 400px;
+
 }
 
 .main {
-  max-width: 400px;
+  max-width: 1000px;
 }

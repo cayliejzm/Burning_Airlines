@@ -3,8 +3,21 @@ var app = app || {};
 app.SearchInputView = Backbone.View.extend({
   events: {
     'click button': 'searchFlight',
-    'keydown input': 'checkForEnter'
+    'keydown input': 'checkForEnter',
+    'click a': 'doSomething'
+    // 'click': 'showFlight'
   },
+
+  doSomething: function (){
+    var appView = new app.AppView();
+    appView.render();
+  },
+
+  showFlight: function (event) {
+    console.log("Can you see me?");
+    // debugger;
+  },
+
 
   checkForEnter: function ( event ) {
 
@@ -29,10 +42,13 @@ app.SearchInputView = Backbone.View.extend({
       var destination = result[i].get("destination");
       var date = result[i].get("date");
       var plane = result[i].get("plane");
+      var flight_id = result[i].get("id")
       $result.text( flight_number + " / " + origin + " / " + destination + " / " + date + " / " + plane );
-      $result.prependTo( "#results" );
+      var linkedResult = $("<a>").html($result)
+      // linkedResult.attr("class", "result")
+      linkedResult.attr("href", "/flights/"+flight_id)
+      linkedResult.prependTo( "#results" );
     }
-
   },
 
   el: "#searchWord",

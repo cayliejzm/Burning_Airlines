@@ -8,6 +8,8 @@ class AirplanesController < ApplicationController
 
 
   def show
+    @airplane = Airplane.find params[:id]
+    
   end
 
 

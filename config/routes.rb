@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "reservations#home"
+  get 'welcome/index'
+
+  root "welcome#index"
 
   get '/flights/new', :to => 'flights#home'
 
