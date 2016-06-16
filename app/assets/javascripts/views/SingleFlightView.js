@@ -13,11 +13,19 @@ app.SingleFlightView = Backbone.View.extend({
   selectSeat: function () {
 
     $('#seatBoard ul li').on("click", function(t){
-      var test = $("#user_name")
-      $(this).css({"background-color": "red"})
-      $(this).html(test)
-      // debugger;
-      // console.log("Kane")
+      var userName = $("#user_name")
+      // $(this).css({"background-color": "red"})
+      $(this).html(userName)
+
+      var currentSeat = $(this)
+      var seatRow = currentSeat.attr('data-row')
+      var seatColumn = currentSeat.attr('data-column')
+      var seatNumber = seatRow + '' + seatColumn
+
+      var text = $("<li>").text(seatNumber)
+      $("#selectedSeat").html(text)
+// Maybe, I can user .template to make this seat info paragraph
+
     })
     console.log( "A seat selected" );
   },
