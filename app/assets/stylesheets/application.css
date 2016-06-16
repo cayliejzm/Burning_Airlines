@@ -5,6 +5,7 @@ body {
   text-align: center;
   background: url("airplane.jpeg");
   background-size: cover;
+
 }
 
 h1 {
@@ -67,4 +68,10 @@ li a:hover {
 
 .login {
   text-align: center;
+}
+
+.field {
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: 100;
 }
