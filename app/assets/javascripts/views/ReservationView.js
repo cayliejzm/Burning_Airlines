@@ -4,7 +4,7 @@ app.ReservationView = Backbone.View.extend({
   // tagName: 'li',
   render: function () {
 // debugger;
-app.reservations.where({flight_id:app.currentFlightId})
+var result = app.reservations.where({flight_id:parseInt(app.currentFlightId)})
 
 // What do I need here? I need the flight_id and the seatID, that
 // the reservation model has. Yes, it has everything. Wow.
@@ -14,6 +14,7 @@ app.reservations.where({flight_id:app.currentFlightId})
 // After finding the seats, it's gonna add a class 'reserved' to those seats
 
 var seatArray = _.map(result, function(r){return r.get("seatID")}) // r.get() is Backbone method
+var userArray = _.map(result, function(r){return r.get("user_id")}) // r.get() is Backbone method
 
 // Now, I got the array of the reserved seat numbers. Since the seat number
 // is a combination of row and column and column is just one character.

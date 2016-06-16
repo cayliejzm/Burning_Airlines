@@ -5,6 +5,10 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.all
   end
 
+  def home
+    @users = User.all
+  end
+
   def show
   end
 

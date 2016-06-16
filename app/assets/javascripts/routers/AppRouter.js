@@ -20,11 +20,13 @@ app.AppRouter = Backbone.Router.extend({
       id:id
     });
 
+// Do I need reservation argument below??
+  // You don't need to set the model of reservationView since it has initial model
     flight.fetch().done(function(flight, reservation){
       var singleFlightView = new app.SingleFlightView();
       singleFlightView.render(flight, reservation, id);
-      // var reservationInputView = new app.ReservationInputView();
-      // reservationInputView.render(reservation)
+      var reservationView = new app.ReservationView();
+      reservationView.render();
     })
     // var reservation = new app.Reservation
 
