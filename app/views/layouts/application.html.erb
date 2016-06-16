@@ -16,13 +16,14 @@
                       <li><%= link_to "PROFILE", user_path(@current_user) %></li>
                       <li><a href="/search">SEARCH</a></li>
                       <li><a href="/flights/new">CREATE FLIGHT</a></li>
-                      <li><a href="/airplanes/new">CREATE AIRPLANE</a></li>
+                      <li><a href="/airplanes/new">VIEW AIRPLANES</a></li>
                       <li><a href="/search">RESERVE</a></li>
 
                       <% elsif @current_user %>
                       <li><%= link_to "LOG OUT", logout_path, :method => :delete %></li>
                       <li><%= link_to "PROFILE", user_path(@current_user) %></li>
                       <li><a href="/search">SEARCH</a></li>
+                      <li><a href="/airplanes/new">VIEW AIRPLANES</a></li>
                       <li><a href="/search">RESERVE</a></li>
                   <% else %>
                       <li><%= link_to "SIGN UP", new_user_path %></li>
