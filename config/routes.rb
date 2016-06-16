@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
 
->>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
   root "welcome#index"
 
   get '/search', :to => 'reservations#home'

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 20px;
@@ -33,12 +29,9 @@ h3 {
   padding-top: 20px;
 }
 
-<<<<<<< HEAD
 
-ul {
-=======
 .navigation ul {
->>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -71,11 +64,7 @@ nav li a {
     background-color: gainsboro;
 }
 
-<<<<<<< HEAD
-li a:hover {
-=======
 nav li a:hover {
->>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
   background-color: #767779;
 }
 
