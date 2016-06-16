@@ -13,6 +13,7 @@ class AirplanesController < ApplicationController
 
   def new
     @airplane = Airplane.new
+    @airplanes = Airplane.all
   end
 
 
@@ -21,17 +22,20 @@ class AirplanesController < ApplicationController
 
 
   def create
-    @airplane = Airplane.new(airplane_params)
 
-    respond_to do |format|
-      if @airplane.save
-        format.html { redirect_to @airplane, notice: 'Airplane was successfully created.' }
-        format.json { render :show, status: :created, location: @airplane }
-      else
-        format.html { render :new }
-        format.json { render json: @airplane.errors, status: :unprocessable_entity }
-      end
-    end
+    @airplane = Airplane.create airplane_params
+    @airplanes = Airplane.all
+    redirect_to "/airplane/#{airplane.id}"
+
+    # respond_to do |format|
+    #   if @airplane.save
+    #     format.html { redirect_to @airplane, notice: 'Airplane was successfully created.' }
+    #     format.json { render :show, status: :created, location: @airplane }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @airplane.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
 
@@ -54,6 +58,16 @@ class AirplanesController < ApplicationController
       format.html { redirect_to airplanes_url, notice: 'Airplane was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def airbus300
+  end
+
+  def boeing747
+  end
+
+
+  def privateJet
   end
 
   private
