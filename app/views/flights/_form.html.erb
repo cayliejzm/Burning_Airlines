@@ -27,11 +27,12 @@
     <%= f.label :date %><br>
     <%= f.datetime_select :date %>
   </div>
+
   <div class="field">
-    <%= f.label :plane %><br>
-    <%= f.text_area :plane %>
-  </div>
-  <div class="actions">
+    <%= f.label :airplane_id %><br>
+    <%= f.select :airplane_id, Airplane.all.map { |a| [a.name, a.id]}, :include_blank => true %>
+    <!-- <%= f.collection_select(:airplane_id, Airplane.all, :id, :name) %> -->
+
     <%= f.submit %>
   </div>
 <% end %>

@@ -8,9 +8,7 @@ class FlightsController < ApplicationController
 
 
   def show
-    # raise 'hell';
-    # @current_user=
-
+    @flight = Flight.find params[:id]
   end
 
 
@@ -20,11 +18,13 @@ class FlightsController < ApplicationController
 
 
   def edit
+    @flight = Flight.find params[:id]
   end
 
 
   def create
-    @flight = Flight.new(flight_params)
+    @flight = Flight.create flight_params
+
 
     respond_to do |format|
       if @flight.save
