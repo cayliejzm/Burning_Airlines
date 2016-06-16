@@ -55,7 +55,7 @@ class ReservationsController < ApplicationController
   private
 
     def set_reservation
-      @reservation = Reservation.find(params[:id])
+      @reservation = Reservation.find(params[:id, :user_id, :flight_id])
     end
 
     def reservation_params

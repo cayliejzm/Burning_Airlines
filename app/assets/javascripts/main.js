@@ -1,4 +1,5 @@
 app.flights = new app.Flights();
+app.reservations = new app.Reservations();
 
 $(document).ready(function () {
 
@@ -7,9 +8,14 @@ $(document).ready(function () {
   Backbone.history.start();
 
   app.flights.fetch();
+  app.reservations.fetch();
 
   window.setInterval(function () {
     app.flights.fetch();
-  }, 5000);
+  }, 8000);
+
+  window.setInterval(function () {
+    app.reservations.fetch();
+  }, 8000);
 
 });
