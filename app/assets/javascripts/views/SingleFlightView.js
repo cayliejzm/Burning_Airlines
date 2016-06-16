@@ -23,48 +23,29 @@ app.SingleFlightView = Backbone.View.extend({
     }),
     reservation.save();
     selectedSeat.addClass("reserved")
-
     app.reservations.add( reservation );
+    debugger;
     console.log("Save will work");
   },
 
   selectSeat: function (e) {
     var seat = $(e.currentTarget)
-    var userName = $("#user_name")
-     // $(this).css({"background-color": "red"})
-     $(".selected").removeClass("selected")
-     seat.addClass("selected")
-    //  seat.toggleClass("selected")
-     seat.html(userName)
+    if (!seat.hasClass("reserved")){
+      var userName = $("#user_name")
+       $(".selected").removeClass("selected")
+       seat.addClass("selected")
+      //  seat.toggleClass("selected")
+       seat.html(userName)
+  // debugger;
+       var seatRow = seat.attr('data-row')
+       var seatColumn = seat.attr('data-column')
+       var seatNumber = seatRow + '' + seatColumn
 
-// debugger;
-     var seatRow = seat.attr('data-row')
-     var seatColumn = seat.attr('data-column')
-     var seatNumber = seatRow + '' + seatColumn
-
-     var text = $("<li>").text(seatNumber)
-     $("#selectedSeat").html(text)
-
-//     $('#seatBoard ul li').on("click", function(t){
-//       var userName = $("#user_name")
-//       // $(this).css({"background-color": "red"})
-//       $(this).toggleClass("selected")
-//       $(this).html(userName)
-//
-// // debugger;
-//       var currentSeat = $(this)
-//       var seatRow = currentSeat.attr('data-row')
-//       var seatColumn = currentSeat.attr('data-column')
-//       var seatNumber = seatRow + '' + seatColumn
-//
-//       var text = $("<li>").text(seatNumber)
-//       $("#selectedSeat").html(text)
-// // Maybe, I can user .template to make this seat info paragraph
-//
-//     })
-    console.log( "A seat selected" );
+       var text = $("<li>").text(seatNumber)
+       $("#selectedSeat").html(text)
+      console.log( "A seat selected" );
+    }
   },
-
 
   el: "#main",
 
