@@ -19,11 +19,11 @@ app.FlightInputView = Backbone.View.extend({
     console.log( "A new flight should be created" );
     var flight = new app.Flight();
 
-    var flightNumber = this.$el.find('.flightNumber').val();
-    var flightOrigin = this.$el.find('.flightOrigin').val();
-    var flightDestination = this.$el.find('.flightDestination').val();
+    var flightNumber = this.$el.find('.flightNumber').val().toUpperCase();
+    var flightOrigin = this.$el.find('.flightOrigin').val().toUpperCase();
+    var flightDestination = this.$el.find('.flightDestination').val().toUpperCase();
     var flightDate = this.$el.find('.flightDate').val();
-    var flightPlane = this.$el.find('.flightPlane').val();
+    var flightPlane = this.$el.find('.flightPlane').val().toUpperCase();
 
 
     flight.set({

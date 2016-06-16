@@ -1,29 +1,17 @@
-<%= form_for(@airplane) do |f| %>
-  <% if @airplane.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@airplane.errors.count, "error") %> prohibited this airplane from being saved:</h2>
 
-      <ul>
-      <% @airplane.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :row %><br>
-    <%= f.number_field :row %>
+<%= link_to airbus_path do %>
+  <div class="Airbus">
+    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/5/59/Airbus_A300-600ST_Airbus_Industries_(AIB)_Beluga_2_F-GSTB_-_MSN_751_(9738915761).jpg", class: 'thumbnail' %>
   </div>
-  <div class="field">
-    <%= f.label :column %><br>
-    <%= f.text_area :column %>
+<%end%>
+<%= link_to privatejet_path do %>
+  <div class="PrivatePlane">
+    <%= image_tag "http://jetlux.com/images/Private-Jet-Dental-Holidays.png", class: 'thumbnail' %>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+<% end %>
+<%= link_to boeing747_path do %>
+  <div class="Boeing">
+    <%= image_tag "http://www.britishairways.com/assets/images/information/about-ba/fleet-facts/boeing-747-400/photo-gallery/750x500-boeing747-400-2.jpg", class: 'thumbnail'%>
   </div>
 <% end %>
