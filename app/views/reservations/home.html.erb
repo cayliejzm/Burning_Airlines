@@ -1,6 +1,9 @@
 <div id="main">
   Burning Airlines
 </div>
+<p id="user_name">
+<%= @current_user.name %>
+</p>
 
 <script id="appViewTemplate" type="html/template">
   <h1>Search Flights</h1>
@@ -28,54 +31,36 @@
 
 </script>
 
+  <script id="flightTemplate" type="html/template">
 
-<script id="flightTemplate" type="html/template">
+    <p>Flight Number: <span id="flight_number"></span></p>
+    <p>From: <span id="origin"></span>
+    <span> / </span>
+    To: <span id="destination"></span></p>
+    <p> Date: <span id="date"></span></p>
+    <p> Plane: <span id="plane">Plane:</span></p>
 
-  <p id="flight_number">
+    <h1>Seats</h1>
 
-  </p>
+    <div id="seatBoard">
+        <ul class="row1">
+          <p></p>
+          <li class="seat seat1" data-row='0' data-column='A'></li>
+          <li class="seat seat2" data-row='0' data-column='B'></li>
+          <li class="seat seat3" data-row='0' data-column='C'></li>
+          <li class="seat seat4" data-row='0' data-column='D'></li>
 
-  <p id="origin">
+        </ul>
+        <ul class="row2">
+          <li class="seat seat5" data-row='1' data-column='A'></li>
+          <li class="seat seat6" data-row='1' data-column='B'></li>
+          <li class="seat seat7" data-row='1' data-column='C'></li>
+          <li class="seat seat8" data-row='1' data-column='D'></li>
 
-  </p>
+        </ul>
+    </div>
 
-  <p id="destination">
-
-  </p>
-  <p id="date">
-
-  </p>
-  <p id="plane">
-
-  </p>
-
-  <h1>Seats</h1>
-
-  <div id="seatBoard">
-  </div>
-
-  <ul id="selectedSeat">
-  </ul>
-
-  <div class="">
-    <ul class="row1">
-      <p></p>
-      <li class="seat seat1" data-row='0' data-column='A'></li>
-      <li class="seat seat2" data-row='0' data-column='B'></li>
-      <li class="seat seat3" data-row='0' data-column='C'></li>
-      <li class="seat seat4" data-row='0' data-column='D'></li>
-
+    <ul id="selectedSeat">
     </ul>
-    <ul class="row2">
-      <li class="seat seat5" data-row='1' data-column='A'></li>
-      <li class="seat seat6" data-row='1' data-column='B'></li>
-      <li class="seat seat7" data-row='1' data-column='C'></li>
-      <li class="seat seat8" data-row='1' data-column='D'></li>
 
-    </ul>
-  </div>
-
-
-
-
-</script>
+  </script>

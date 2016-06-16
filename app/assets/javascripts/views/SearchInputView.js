@@ -43,7 +43,7 @@ app.SearchInputView = Backbone.View.extend({
       var date = result[i].get("date");
       var plane = result[i].get("plane");
       var flight_id = result[i].get("id")
-      $result.text( flight_number + " / " + origin + " / " + destination + " / " + date + " / " + plane );
+      $result.text( flight_number + " / " + origin + " > " + destination + " / " + date + " / " + plane );
       var linkedResult = $("<a>").html($result)
       // linkedResult.attr("class", "result")
       linkedResult.attr("href", "#flights/"+flight_id)

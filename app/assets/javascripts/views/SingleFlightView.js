@@ -13,8 +13,10 @@ app.SingleFlightView = Backbone.View.extend({
   selectSeat: function () {
 
     $('#seatBoard ul li').on("click", function(t){
+      var test = $("#user_name")
       $(this).css({"background-color": "red"})
-      debugger;
+      $(this).html(test)
+      // debugger;
       // console.log("Kane")
     })
     console.log( "A seat selected" );
