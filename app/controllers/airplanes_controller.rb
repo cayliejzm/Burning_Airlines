@@ -9,7 +9,6 @@ class AirplanesController < ApplicationController
 
   def show
     @airplane = Airplane.find params[:id]
-    
   end
 
 
@@ -20,13 +19,14 @@ class AirplanesController < ApplicationController
 
 
   def edit
+    @airplane = Airplane.find params[:id]
   end
 
 
   def create
-
     @airplane = Airplane.create airplane_params
     @airplanes = Airplane.all
+
     redirect_to "/airplane/#{airplane.id}"
 
     # respond_to do |format|

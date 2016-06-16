@@ -30,9 +30,15 @@
 </div>
 <br/>
 <div id="flightPlane">
-<input class="flightPlane" type="text" name="flightPlaneForm" placeholder="plane type" style="text-transform:uppercase"></input>
+<select name="" id="">
+<%= options_for_select Airplane.all.map { |a| [a.name, a.id] }, :include_blank => true %>
+</select>
 </div>
 <br/>
 <button type="submit" value="Submit">Submit</button>
 <br/>
 </script>
+
+
+<!-- $("select").val(); will get the id
+$("select option:selected").text(); will get the selected text -->

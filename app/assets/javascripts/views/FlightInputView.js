@@ -52,3 +52,7 @@ app.FlightInputView = Backbone.View.extend({
   }
 
 });
+
+
+ // work out fetch to return the appropriate models,
+ // pass that information to selection field on form in home.html
