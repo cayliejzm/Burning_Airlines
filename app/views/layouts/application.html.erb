@@ -9,7 +9,10 @@
     <body>
         <nav>
             <div class="navigation">
-                <ul>
+                <span>
+                  <% if @current_user %>
+                  <li>Current User: <%= @current_user.name %></li>
+                  <% end %>
                     <% if @current_user && @current_user.admin == true %>
                     <li><%= link_to "Profile", user_path(@current_user) %></li>
                     <li><%= link_to "Users", users_path %></li>
@@ -21,7 +24,8 @@
                     <li><%= link_to "Sign up", new_user_path %></li>
                     <li><%= link_to "Log in", login_path %></li>
                     <% end %>
-                </ul>
+                </span>
+
             </div>
         </nav>
 
