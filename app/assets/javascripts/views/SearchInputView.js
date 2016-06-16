@@ -3,8 +3,21 @@ var app = app || {};
 app.SearchInputView = Backbone.View.extend({
   events: {
     'click button': 'searchFlight',
-    'keydown input': 'checkForEnter'
+    'keydown input': 'checkForEnter',
+    'click a': 'doSomething'
+    // 'click': 'showFlight'
   },
+
+  doSomething: function (){
+    var appView = new app.AppView();
+    appView.render();
+  },
+
+  showFlight: function (event) {
+    console.log("Can you see me?");
+    // debugger;
+  },
+
 
   checkForEnter: function ( event ) {
 
