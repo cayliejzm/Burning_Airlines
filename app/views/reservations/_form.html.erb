@@ -19,6 +19,10 @@
     <%= f.label :flight_id %><br>
     <%= f.select :flight_id, Flight.all.map{ |f| [ f.flight_number, f.id ] }, :include_blank => true %>
   </div>
+  <div class="field">
+    <%= f.label :seatID %><br>
+    <%= f.text_area :seatID %>
+  </div>
   <br/>
   <div class="actions">
     <%= f.submit %>

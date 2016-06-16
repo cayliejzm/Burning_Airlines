@@ -6,8 +6,7 @@ app.Reservation = Backbone.Model.extend({
   defaults: {
     user_id: "",
     flight_id: "",
-    row_id: "",
-    column_id: ""
+    seatID: ""
   },
 
   initialize: function () {

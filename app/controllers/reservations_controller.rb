@@ -59,6 +59,6 @@ class ReservationsController < ApplicationController
     end
 
     def reservation_params
-      params.fetch(:reservation, {}).permit(:user_id, :flight_id)
+      params.fetch(:reservation, {}).permit(:user_id, :flight_id, :seatID)
     end
 end

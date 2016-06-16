@@ -26,6 +26,7 @@ app.AppRouter = Backbone.Router.extend({
       // var reservationInputView = new app.ReservationInputView();
       // reservationInputView.render(reservation)
     })
+    // var reservation = new app.Reservation
 
   }
 
