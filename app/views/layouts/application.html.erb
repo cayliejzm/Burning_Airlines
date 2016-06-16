@@ -17,13 +17,21 @@
                       <li><a href="/search">SEARCH</a></li>
                       <li><a href="/flights/new">CREATE FLIGHT</a></li>
                       <li><a href="/airplanes/new">CREATE AIRPLANE</a></li>
+<<<<<<< HEAD
                       <li><a href="/reservations/new">RESERVE</a></li>
+=======
+                      <li><a href="/search">RESERVE</a></li>
+>>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
 
                       <% elsif @current_user %>
                       <li><%= link_to "LOG OUT", logout_path, :method => :delete %></li>
                       <li><%= link_to "PROFILE", user_path(@current_user) %></li>
                       <li><a href="/search">SEARCH</a></li>
+<<<<<<< HEAD
                       <li><a href="/reservations/new">RESERVE</a></li>
+=======
+                      <li><a href="/search">RESERVE</a></li>
+>>>>>>> dbb5e12b72b15ade20a1fe430f9d5239bb0f531a
                   <% else %>
                       <li><%= link_to "SIGN UP", new_user_path %></li>
                       <li><%= link_to "LOG IN", login_path %></li>
