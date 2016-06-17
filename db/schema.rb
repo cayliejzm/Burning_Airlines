@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(version: 20160616094941) do
   create_table "users", force: :cascade do |t|
     t.text     "email"
     t.text     "name"
-    t.boolean  "admin",           default: false
+    t.boolean  "admin"
     t.text     "password_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

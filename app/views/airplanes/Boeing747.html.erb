@@ -100,15 +100,6 @@
 </div>
 
 
-<p>Boeing-747 Current Flights </p>
-
-<% @airplane.flights.each do |flight| %>
-  <ul>
-    <li>
-    <%= link_to( flight.flight_number, flight_path(flight)) %>
-    </li>
-  </ul>
-<% end %>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
