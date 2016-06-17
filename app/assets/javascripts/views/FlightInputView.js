@@ -25,14 +25,17 @@ app.FlightInputView = Backbone.View.extend({
     var flightDestination = this.$el.find('.flightDestination').val().toUpperCase();
     var flightDate = this.$el.find('.flightDate').val();
     var flightPlane = $('#flightPlane select option:selected').text();
-// debugger
+    var flightPlaneId = $('#flightPlane select option:selected').val();
+
+debugger
 
     flight.set({
       flight_number: flightNumber,
       origin: flightOrigin,
       destination: flightDestination,
       date: flightDate,
-      plane: flightPlane
+      plane: flightPlane,
+      airplane_id: flightPlaneId
     });
     flight.save();
     app.flights.add( flight );
@@ -41,6 +44,7 @@ app.FlightInputView = Backbone.View.extend({
     this.$el.find('.flightDestination').val('').focus();
     this.$el.find('.flightDate').val('').focus();
     this.$el.find('.flightPlane').val('').focus();
+
   },
 
   el: "#flightNameForm",
