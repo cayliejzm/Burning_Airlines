@@ -32,7 +32,7 @@ app.SearchInputView = Backbone.View.extend({
     console.log( "A new search created" );
     var originKeyword = this.$el.find('.searchOrigin').val().toUpperCase();
     var destinationKeyword = this.$el.find('.searchDestination').val().toUpperCase();
-
+// debugger;
     var result = app.flights.where({ origin: originKeyword, destination: destinationKeyword  });
 
     for(var i=0; i<result.length; i +=1){

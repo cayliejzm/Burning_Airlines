@@ -5,6 +5,10 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.all
   end
 
+  def home
+    @users = User.all
+  end
+
   def show
   end
 
@@ -59,6 +63,6 @@ class ReservationsController < ApplicationController
     end
 
     def reservation_params
-      params.fetch(:reservation, {}).permit(:user_id, :flight_id)
+      params.fetch(:reservation, {}).permit(:user_id, :flight_id, :seatID)
     end
 end

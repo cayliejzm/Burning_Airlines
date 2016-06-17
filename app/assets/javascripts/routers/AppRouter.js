@@ -20,13 +20,6 @@ app.AppRouter = Backbone.Router.extend({
       id:id
     });
 
-    flight.fetch().done(function(flight, reservation){
-      var singleFlightView = new app.SingleFlightView();
-      singleFlightView.render(flight, reservation, id);
-      // var reservationInputView = new app.ReservationInputView();
-      // reservationInputView.render(reservation)
-    })
-
   }
 
 });
